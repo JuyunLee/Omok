@@ -190,14 +190,3 @@ void err_quit(char* msg)
 	err_display(msg);
 	exit(1);
 }
-
-//udp
-int SendTo(SOCKET srvSock, char* buf, SOCKADDR_IN* addr)
-{
-	return sendto(srvSock, *buf, strlen(*buf), NULL, (SOCKADDR*)addr, sizeof(SOCKADDR_IN));
-}
-
-int RecvFrom(SOCKET srvSock, char* buf, SOCKADDR_IN* addr, int* addrSize)
-{
-	return recvfrom(srvSock, buf, sizeof(*buf), NULL, (SOCKADDR*)addr, addrSize);
-}

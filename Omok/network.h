@@ -83,9 +83,3 @@ void err_display(char* msg);
 
 */
 void err_quit(char* msg);
-
-//udp
-
-int SendTo(SOCKET srvSock, char* buf, SOCKADDR_IN* addr);
-
-int RecvFrom(SOCKET srvSock, char* buf, SOCKADDR_IN* addr, int* addrSize);

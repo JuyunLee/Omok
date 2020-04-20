@@ -708,13 +708,13 @@ char Judge3Situation(int vnDolMatrix[15][15], int* pvnCursorOnDolMat, char cWhos
 					break;
 				}
 			}
-			else if (vnDolMatrix[cYtoUse - 1][cXtoUse - 1] == cWhosTurn || vnDolMatrix[cYtoUse - 1][cXtoUse - 1] == cWhosTurn + 10)
+			else if (vnDolMatrix[cYtoUse - 1][cXtoUse + 1] == cWhosTurn || vnDolMatrix[cYtoUse - 1][cXtoUse + 1] == cWhosTurn + 10)
 			{
 				cXtoUse++;
 				cYtoUse--;
 				cJumped = 0;
 			}
-			else if (vnDolMatrix[cYtoUse - 1][cXtoUse - 1] == 0 || vnDolMatrix[cYtoUse - 1][cXtoUse - 1] == 10)
+			else if (vnDolMatrix[cYtoUse - 1][cXtoUse + 1] == 0 || vnDolMatrix[cYtoUse - 1][cXtoUse + 1] == 10)
 			{
 				cXtoUse++;
 				cYtoUse--;
@@ -801,13 +801,13 @@ char Judge3Situation(int vnDolMatrix[15][15], int* pvnCursorOnDolMat, char cWhos
 					break;
 				}
 			}
-			else if (vnDolMatrix[cYtoUse + 1][cXtoUse + 1] == cWhosTurn || vnDolMatrix[cYtoUse + 1][cXtoUse + 1] == cWhosTurn + 10)
+			else if (vnDolMatrix[cYtoUse + 1][cXtoUse - 1] == cWhosTurn || vnDolMatrix[cYtoUse + 1][cXtoUse - 1] == cWhosTurn + 10)
 			{
 				cXtoUse--;
 				cYtoUse++;
 				cJumped = 0;
 			}
-			else if (vnDolMatrix[cYtoUse + 1][cXtoUse + 1] == 0 || vnDolMatrix[cYtoUse + 1][cXtoUse + 1] == 10)
+			else if (vnDolMatrix[cYtoUse + 1][cXtoUse - 1] == 0 || vnDolMatrix[cYtoUse + 1][cXtoUse - 1] == 10)
 			{
 				cXtoUse--;
 				cYtoUse++;
@@ -894,8 +894,11 @@ char Judge33Situation(int vnDolMatrix[15][15], int* pvnCursorOnDolMat, char cWho
 	// ￠ 规氢
 	if (Judge3Situation(vnDolMatrix, pvnCursorOnDolMat, cWhosTurn, 2) == 1)
 		cNumOf3++;
-	// ① 规氢 规氢
+	// ① 规氢
 	if (Judge3Situation(vnDolMatrix, pvnCursorOnDolMat, cWhosTurn, 1) == 1)
+		cNumOf3++;
+	// ⒆ 规氢
+	if (Judge3Situation(vnDolMatrix, pvnCursorOnDolMat, cWhosTurn, 3) == 1)
 		cNumOf3++;
 
 	if (cNumOf3 >= 2)

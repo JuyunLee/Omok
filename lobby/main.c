@@ -2,6 +2,7 @@
 #include "include.h"
 #define SERVERPORT	22122
 
+// Queue의 front & rear
 WORK* workfront = NULL;
 WORK* workrear = NULL;
 
@@ -16,11 +17,11 @@ int main(int argc, char* argv[])
 	if (WSAStartup(MAKEWORD(2, 2), &wsa) != 0)
 		printf("WSA startup failed\n");
 
-	sock = OpenLobby(&srvAddr, SERVERPORT);
+	sock = OpenLobby(&srvAddr, SERVERPORT); // 로비 UDP 소켓 구성
 
 	HANDLE workerThread = NULL;
 	UINT dwThreadIDwo = NULL;
-	workerThread = (HANDLE)_beginthreadex(NULL, 0, DoWork, (void*)&sock, 0, dwThreadIDwo);
+	workerThread = (HANDLE)_beginthreadex(NULL, 0, DoWork, (void*)&sock, 0, dwThreadIDwo); // 워커 스레드 시작
 
 	// 추가
 	//HANDLE chattingThread = NULL;

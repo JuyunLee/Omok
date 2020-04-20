@@ -1,6 +1,6 @@
 ﻿  chat.c
-D:\KGITBank\Job\오목 (2)\chatting\chat.c(53,62): warning C4047: '함수': 'int'의 간접 참조 수준이 'void *'과(와) 다릅니다.
-D:\KGITBank\Job\오목 (2)\chatting\chat.c(53,62): warning C4024: 'recvfrom': 형식 및 실제 매개 변수 4의 형식이 서로 다릅니다.
-D:\KGITBank\Job\오목 (2)\chatting\chat.c(47,1): warning C4996: 'inet_addr': Use inet_pton() or InetPton() instead or define _WINSOCK_DEPRECATED_NO_WARNINGS to disable deprecated API warnings
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\WinSock2.h(1831): message : 'inet_addr' 선언을 참조하십시오.
-  chatting.vcxproj -> D:\KGITBank\Job\오목 (2)\chatting\Debug\chatting.exe
+C:\Users\KGITBank\Desktop\오목_0419\chatting\chat.c(57): warning C4047: '함수': 'int'의 간접 참조 수준이 'void *'과(와) 다릅니다.
+C:\Users\KGITBank\Desktop\오목_0419\chatting\chat.c(57): warning C4024: 'recvfrom': 형식 및 실제 매개 변수 4의 형식이 서로 다릅니다.
+C:\Users\KGITBank\Desktop\오목_0419\chatting\chat.c(51): warning C4996: 'inet_addr': Use inet_pton() or InetPton() instead or define _WINSOCK_DEPRECATED_NO_WARNINGS to disable deprecated API warnings
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.17763.0\um\WinSock2.h(1831): note: 'inet_addr' 선언을 참조하십시오.
+  chatting.vcxproj -> C:\Users\KGITBank\Desktop\오목_0419\chatting\Debug\chatting.exe

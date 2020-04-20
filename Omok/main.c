@@ -34,6 +34,11 @@ int main(int argc, char* argv[])
 	HWND hCurr = GetConsoleWindow();
 	SetWindowPos(hCurr, HWND_TOP, 640, 250, 0, 0, SWP_NOSIZE);
 
+	DWORD prevMode = 0;
+	HANDLE handle = GetStdHandle(STD_INPUT_HANDLE);
+	GetConsoleMode(handle, &prevMode);
+	SetConsoleMode(handle, prevMode & ~ENABLE_QUICK_EDIT_MODE);
+
 	cursor(0); // 커서 지우기
 	system("mode con cols=35 lines=25 | title 몰래오목");
 	system("color 60");
@@ -151,14 +156,16 @@ int main(int argc, char* argv[])
 						system("cls");
 						gotoxy(-1, 0);
 						PrintPan(vnPanMatrix, vnDolMatrix, cWhosTurn);
-						gotoxy(stCursor.vnCursorCoords[0], stCursor.vnCursorCoords[1] - 1);
+						//gotoxy(stCursor.vnCursorCoords[0], stCursor.vnCursorCoords[1] - 1);
+						gotoxy(stCursor.vnCursorCoords[0], stCursor.vnCursorCoords[1]);
 						cGameMode = 1;
 						cMenuMode = 0;
 						Send(opponentSock, "m"); // 무르기
 					} else if (nResult == 1) { // 게임 재개
 						gotoxy(-1, 0);
 						PrintPan(vnPanMatrix, vnDolMatrix, cWhosTurn);
-						gotoxy(stCursor.vnCursorCoords[0], stCursor.vnCursorCoords[1] - 1);
+						//gotoxy(stCursor.vnCursorCoords[0], stCursor.vnCursorCoords[1] - 1);
+						gotoxy(stCursor.vnCursorCoords[0], stCursor.vnCursorCoords[1]);
 						cGameMode = 1;
 						cMenuMode = 0;
 						Send(opponentSock, "c"); // continue
@@ -305,12 +312,14 @@ int main(int argc, char* argv[])
 		{
 			if (cMyTurn == cWhosTurn) // 내 차례일 때
 			{
+				fflush(stdin);
 				gotoxy(0, 16);
 				printf(" 내 차례입니다. 돌을 놓아주세요      ");
 				gotoxy(0, 18);
 				printf("                               ");
 				gotoxy(stCursor.vnCursorCoords[0], stCursor.vnCursorCoords[1]);
 				system("color 60");
+				Sleep(10);
 				nNextKey = _getch();
 				cNextKey[0] = (char)nNextKey;
 				cNextKey[1] = 0; // 문자열 형태로 네트워킹이 이루어지기 때문에 NULL을 넣었음.
@@ -325,7 +334,7 @@ int main(int argc, char* argv[])
 				system("color 80");
 				IgnoreKeyboardInput();
 				Recv(opponentSock, cNextKey);
-				IgnoreKeyboardInput(); // 입력 받기 전후로 다 무시
+				//IgnoreKeyboardInput(); // 입력 받기 전후로 다 무시
 			}
 			else
 			{

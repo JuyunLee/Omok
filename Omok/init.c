@@ -4,7 +4,11 @@
 #include "structs.h"
 #include "control.h"
 
-void cursor(int n) // 커서 보이기 & 숨기기 (0 : 숨기기 / 1 : 보이기)
+/*
+커서 보이기 & 숨기기
+	@prarm		n		보일지 숨길지 (0 : 숨기기 / 1 : 보이기)
+*/
+void cursor(int n)
 {
 	HANDLE hConsole;
 	CONSOLE_CURSOR_INFO ConsoleCursor;
@@ -107,7 +111,14 @@ void InitializePanMatrix(int* pvnMatrix, int nSize)
 	}
 }
 /*
-cWinner = cWhosTurn
+게임 재시작을 위해 변수들을 초기화 합니다
+@param	vnDolMatrix[][]		돌 정보가 담긴 배열
+@param	cWhosTurn			현재 차례
+@prarm	cMyTurn				내 차례 정보가 담긴 변수의 주소
+@prarm	cNewMyTurn			새 게임에서 이용할 돌(1 : 흑 / -1 : 백)
+@prarm	chance				무르기 기회가 담긴 변수의 주소
+@prarm	stCursor			커서 구조체의 주소
+@output 없음
 */
 void InitializeToReGame(int vnDolMatrix[15][15], char* cWhosTurn, char* cMyTurn, char cNewMyTurn, int* chance, struct cursor* stCursor)
 {

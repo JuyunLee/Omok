@@ -170,6 +170,7 @@ void IgnoreKeyboardInput()
 
 /*
 무르기를 실시합니다
+@param		stCursor	커서 구조체의 주소
 */
 void Murugi(struct cursor* stCursor)
 {

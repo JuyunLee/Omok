@@ -7,6 +7,11 @@
 maxroomnum = 1;
 roomcount = 0;
 
+/*
+방 노드(Double Linked List)를 생성
+	@param		없음
+	@output		새 노드의 주소
+*/
 ROOM* GetRoom()
 {
 	ROOM* tmp;
@@ -19,6 +24,11 @@ ROOM* GetRoom()
 	return tmp;
 }
 
+/*
+N번째 방을 가져옵니다
+@param		head			ROOM Double Linked List의 head
+@param		iteration		재귀 횟수(--> iteration번째)
+*/
 int GetNthRoom(ROOM** head, int iteration)
 {
 	if (iteration == 0)
@@ -26,9 +36,15 @@ int GetNthRoom(ROOM** head, int iteration)
 	if ((*head)->after != NULL)
 		GetNthRoom(&(*head)->after, --iteration);
 	else
-		return -1; // ㅋㅋㅋ
+		return -1;
 }
 
+/*
+방을 추가합니다
+@param		head		ROOM Double Linked List의 head의 주소
+@param		ownerAddr	방 주인의 주소정보
+@param		roomname	방 이름
+*/
 void AddRoom(ROOM** head, SOCKADDR_IN ownerAddr, char* roomname)
 {
 	if (*head == NULL)
@@ -42,6 +58,10 @@ void AddRoom(ROOM** head, SOCKADDR_IN ownerAddr, char* roomname)
 	(*head)->after->before = *head;
 }
 
+/*
+방을 제거합니다
+@param		head		제거할 방을 가리키는 head의 주소
+*/
 void DeleteRoom(ROOM** head) {
 	ROOM* tmp = NULL;
 	tmp = *head;
@@ -68,7 +88,12 @@ void DeleteRoom(ROOM** head) {
 	free(tmp);
 }
 
-//"192.168.0.30" 형식
+/*
+방 주인의 ip주소를 가져와서 저장합니다
+@param		head		ROOM Double Linked List의 head의 주소
+@param		buf			방 주인의 ip 주소를 담을 배열(문자열 저장)
+@param		roomnum		가져올 방의 번호
+*/
 void GetOwnerAddr(ROOM** head, char* buf, int roomnum) {
 	
 	if (*head == NULL) {
@@ -77,13 +102,19 @@ void GetOwnerAddr(ROOM** head, char* buf, int roomnum) {
 	}
 	if((*head)->roomnum == roomnum){
 		strcpy(buf, inet_ntoa((*head)->ownerAddr.sin_addr));
-		DeleteRoom(&(*head)); // ㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋ 여긴가보군요
+		DeleteRoom(&(*head));
 		return;
 	} else if ((*head)->after != NULL){
 		GetOwnerAddr(&(*head)->after, buf, roomnum);
 	}
 }
 
+/*
+방 번호에 해당하는 방의 주소를 찾습니다
+@param		head		ROOM Double Linked List의 head의 주소
+@param		roomnum		찾을 방 번호
+@output		찾은 방 노드의 주소
+*/
 ROOM* SearchRoom(ROOM** head, int roomnum)
 {
 	if (*head == NULL)
@@ -96,6 +127,10 @@ ROOM* SearchRoom(ROOM** head, int roomnum)
 		return NULL;
 }
 
+/*
+Work(Queue)의 노드를 생성합니다
+@output		생성한 노드의 주소
+*/
 WORK* GetWork()
 {
 	WORK* tmp;
@@ -105,6 +140,14 @@ WORK* GetWork()
 	return tmp;
 }
 
+/*
+Work를 추가합니다
+@param		front		Work Queue의 front
+@param		rear		Work Queue의 rear
+@param		roomnum		접근할 방의 번호
+@param		msg			받은 메시지
+@param		addr		메시지를 보낸 사람의 주소 정보
+*/
 void AddWork(WORK** front, WORK** rear, int roomnum, char* msg, SOCKADDR_IN addr)
 {
 	WORK* tmp;
@@ -130,6 +173,11 @@ void AddWork(WORK** front, WORK** rear, int roomnum, char* msg, SOCKADDR_IN addr
 	}
 }
 
+/*
+Work를 삭제합니다
+@param		front		Work Queue의 front
+@param		rear		Work Queue의 rear
+*/
 void DeleteWork(WORK** front, WORK** rear)
 {
 	if (*front == NULL)

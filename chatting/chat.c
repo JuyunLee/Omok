@@ -19,7 +19,12 @@ void gotoxy(int x, int y) //특정 위치에 출력을 하고 싶을 때 사용하는 함수
 int main(int argc, char* argv[])
 {
 	HWND hCurr = GetConsoleWindow();
-	SetWindowPos(hCurr, HWND_NOTOPMOST, 200, 250, 0, 0, SWP_NOSIZE);
+	SetWindowPos(hCurr, HWND_NOTOPMOST, 200, 250, 0, 0, SWP_NOSIZE);	// 콘솔창 위치 지정
+
+	DWORD prevMode = 0;
+	HANDLE handle = GetStdHandle(STD_INPUT_HANDLE);
+	GetConsoleMode(handle, &prevMode);
+	SetConsoleMode(handle, prevMode & ~ENABLE_QUICK_EDIT_MODE);			// 빠른편집모드 해제 -> 창을 선택상태로 바꿔서 프로그램이 멈추는 문제 해결
 
 	system("mode con cols=55 lines=25");
 	system("title 채팅 | color F0");
@@ -27,13 +32,13 @@ int main(int argc, char* argv[])
 	SetConsoleScreenBufferSize(GetStdHandle(STD_OUTPUT_HANDLE), bufferSize);
 
 	WSADATA wsa;
-	WSAStartup(MAKEWORD(2, 2), &wsa);
+	WSAStartup(MAKEWORD(2, 2), &wsa); // 윈속 초기화
 
 	SOCKET sock;
 	SOCKADDR_IN addr;
 	socklen_t addrSize = sizeof(addr);
 	BOOL opt = TRUE;
-	char buf[21][1024] = { 0 };
+	//char buf[21][1024] = { 0 };
 	char recvbuf[1024] = { 0 };
 	int strLen;
 	
@@ -49,7 +54,7 @@ int main(int argc, char* argv[])
 
 	while (1)
 	{
-		if ((strLen = recvfrom(sock, recvbuf, sizeof(buf) - 1, NULL, (SOCKADDR*)&addr, &addrSize)) > 0)
+		if ((strLen = recvfrom(sock, recvbuf, sizeof(recvbuf) - 1, NULL, (SOCKADDR*)&addr, &addrSize)) > 0)
 		{
 			recvbuf[strLen] = '\0';
 			printf("%s", recvbuf);
@@ -59,4 +64,3 @@ int main(int argc, char* argv[])
 	WSACleanup();
 	return 0;
 }
-

@@ -1,92 +1,10 @@
-﻿  lobby.c
-D:\KGITBank\Job\오목 (2)\Omok\lobby.c(12,1): warning C4996: 'inet_addr': Use inet_pton() or InetPton() instead or define _WINSOCK_DEPRECATED_NO_WARNINGS to disable deprecated API warnings
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\WinSock2.h(1831): message : 'inet_addr' 선언을 참조하십시오.
-D:\KGITBank\Job\오목 (2)\Omok\lobby.c(27,21): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
-D:\KGITBank\Job\오목 (2)\Omok\lobby.c(38,21): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
-D:\KGITBank\Job\오목 (2)\Omok\lobby.c(49,21): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
-D:\KGITBank\Job\오목 (2)\Omok\lobby.c(21,1): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\string.h(133): message : 'strcpy' 선언을 참조하십시오.
-D:\KGITBank\Job\오목 (2)\Omok\lobby.c(32,1): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\string.h(133): message : 'strcpy' 선언을 참조하십시오.
-D:\KGITBank\Job\오목 (2)\Omok\lobby.c(43,1): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\string.h(133): message : 'strcpy' 선언을 참조하십시오.
-D:\KGITBank\Job\오목 (2)\Omok\lobby.c(133,1): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\string.h(440): message : 'strtok' 선언을 참조하십시오.
-D:\KGITBank\Job\오목 (2)\Omok\lobby.c(187,48): warning C4047: '함수': 'int'의 간접 참조 수준이 'void *'과(와) 다릅니다.
-D:\KGITBank\Job\오목 (2)\Omok\lobby.c(187,48): warning C4024: 'sendto': 형식 및 실제 매개 변수 4의 형식이 서로 다릅니다.
-D:\KGITBank\Job\오목 (2)\Omok\lobby.c(189,50): warning C4047: '함수': 'int'의 간접 참조 수준이 'void *'과(와) 다릅니다.
-D:\KGITBank\Job\오목 (2)\Omok\lobby.c(189,50): warning C4024: 'recvfrom': 형식 및 실제 매개 변수 4의 형식이 서로 다릅니다.
-D:\KGITBank\Job\오목 (2)\Omok\lobby.c(213,52): warning C4047: '함수': 'int'의 간접 참조 수준이 'void *'과(와) 다릅니다.
-D:\KGITBank\Job\오목 (2)\Omok\lobby.c(213,52): warning C4024: 'sendto': 형식 및 실제 매개 변수 4의 형식이 서로 다릅니다.
-D:\KGITBank\Job\오목 (2)\Omok\lobby.c(215,54): warning C4047: '함수': 'int'의 간접 참조 수준이 'void *'과(와) 다릅니다.
-D:\KGITBank\Job\오목 (2)\Omok\lobby.c(215,54): warning C4024: 'recvfrom': 형식 및 실제 매개 변수 4의 형식이 서로 다릅니다.
-D:\KGITBank\Job\오목 (2)\Omok\lobby.c(228,53): warning C4047: '함수': 'int'의 간접 참조 수준이 'void *'과(와) 다릅니다.
-D:\KGITBank\Job\오목 (2)\Omok\lobby.c(228,53): warning C4024: 'sendto': 형식 및 실제 매개 변수 4의 형식이 서로 다릅니다.
-D:\KGITBank\Job\오목 (2)\Omok\lobby.c(230,55): warning C4047: '함수': 'int'의 간접 참조 수준이 'void *'과(와) 다릅니다.
-D:\KGITBank\Job\오목 (2)\Omok\lobby.c(230,55): warning C4024: 'recvfrom': 형식 및 실제 매개 변수 4의 형식이 서로 다릅니다.
-D:\KGITBank\Job\오목 (2)\Omok\lobby.c(255,56): warning C4047: '함수': 'int'의 간접 참조 수준이 'void *'과(와) 다릅니다.
-D:\KGITBank\Job\오목 (2)\Omok\lobby.c(255,56): warning C4024: 'sendto': 형식 및 실제 매개 변수 4의 형식이 서로 다릅니다.
-D:\KGITBank\Job\오목 (2)\Omok\lobby.c(257,58): warning C4047: '함수': 'int'의 간접 참조 수준이 'void *'과(와) 다릅니다.
-D:\KGITBank\Job\오목 (2)\Omok\lobby.c(257,58): warning C4024: 'recvfrom': 형식 및 실제 매개 변수 4의 형식이 서로 다릅니다.
-D:\KGITBank\Job\오목 (2)\Omok\lobby.c(269,49): warning C4047: '함수': 'int'의 간접 참조 수준이 'void *'과(와) 다릅니다.
-D:\KGITBank\Job\오목 (2)\Omok\lobby.c(269,49): warning C4024: 'sendto': 형식 및 실제 매개 변수 4의 형식이 서로 다릅니다.
-D:\KGITBank\Job\오목 (2)\Omok\lobby.c(275,56): warning C4047: '함수': 'int'의 간접 참조 수준이 'void *'과(와) 다릅니다.
-D:\KGITBank\Job\오목 (2)\Omok\lobby.c(275,56): warning C4024: 'sendto': 형식 및 실제 매개 변수 4의 형식이 서로 다릅니다.
-D:\KGITBank\Job\오목 (2)\Omok\lobby.c(277,58): warning C4047: '함수': 'int'의 간접 참조 수준이 'void *'과(와) 다릅니다.
-D:\KGITBank\Job\오목 (2)\Omok\lobby.c(277,58): warning C4024: 'recvfrom': 형식 및 실제 매개 변수 4의 형식이 서로 다릅니다.
-D:\KGITBank\Job\오목 (2)\Omok\lobby.c(310,53): warning C4047: '함수': 'int'의 간접 참조 수준이 'void *'과(와) 다릅니다.
-D:\KGITBank\Job\오목 (2)\Omok\lobby.c(310,53): warning C4024: 'sendto': 형식 및 실제 매개 변수 4의 형식이 서로 다릅니다.
-D:\KGITBank\Job\오목 (2)\Omok\lobby.c(312,55): warning C4047: '함수': 'int'의 간접 참조 수준이 'void *'과(와) 다릅니다.
-D:\KGITBank\Job\오목 (2)\Omok\lobby.c(312,55): warning C4024: 'recvfrom': 형식 및 실제 매개 변수 4의 형식이 서로 다릅니다.
-D:\KGITBank\Job\오목 (2)\Omok\lobby.c(333,52): warning C4047: '함수': 'int'의 간접 참조 수준이 'void *'과(와) 다릅니다.
-D:\KGITBank\Job\오목 (2)\Omok\lobby.c(333,52): warning C4024: 'sendto': 형식 및 실제 매개 변수 4의 형식이 서로 다릅니다.
-D:\KGITBank\Job\오목 (2)\Omok\lobby.c(335,54): warning C4047: '함수': 'int'의 간접 참조 수준이 'void *'과(와) 다릅니다.
-D:\KGITBank\Job\오목 (2)\Omok\lobby.c(335,54): warning C4024: 'recvfrom': 형식 및 실제 매개 변수 4의 형식이 서로 다릅니다.
-D:\KGITBank\Job\오목 (2)\Omok\lobby.c(373,52): warning C4047: '함수': 'int'의 간접 참조 수준이 'void *'과(와) 다릅니다.
-D:\KGITBank\Job\오목 (2)\Omok\lobby.c(373,52): warning C4024: 'sendto': 형식 및 실제 매개 변수 4의 형식이 서로 다릅니다.
-D:\KGITBank\Job\오목 (2)\Omok\lobby.c(164,1): warning C4996: 'inet_addr': Use inet_pton() or InetPton() instead or define _WINSOCK_DEPRECATED_NO_WARNINGS to disable deprecated API warnings
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\WinSock2.h(1831): message : 'inet_addr' 선언을 참조하십시오.
-D:\KGITBank\Job\오목 (2)\Omok\lobby.c(177,1): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\string.h(440): message : 'strtok' 선언을 참조하십시오.
-D:\KGITBank\Job\오목 (2)\Omok\lobby.c(180,1): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\string.h(133): message : 'strcpy' 선언을 참조하십시오.
-D:\KGITBank\Job\오목 (2)\Omok\lobby.c(181,1): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\string.h(90): message : 'strcat' 선언을 참조하십시오.
-D:\KGITBank\Job\오목 (2)\Omok\lobby.c(182,1): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\string.h(90): message : 'strcat' 선언을 참조하십시오.
-D:\KGITBank\Job\오목 (2)\Omok\lobby.c(185,1): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\string.h(133): message : 'strcpy' 선언을 참조하십시오.
-D:\KGITBank\Job\오목 (2)\Omok\lobby.c(190,1): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\string.h(440): message : 'strtok' 선언을 참조하십시오.
-D:\KGITBank\Job\오목 (2)\Omok\lobby.c(191,1): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\string.h(133): message : 'strcpy' 선언을 참조하십시오.
-D:\KGITBank\Job\오목 (2)\Omok\lobby.c(192,1): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\string.h(90): message : 'strcat' 선언을 참조하십시오.
-D:\KGITBank\Job\오목 (2)\Omok\lobby.c(212,1): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\string.h(133): message : 'strcpy' 선언을 참조하십시오.
-D:\KGITBank\Job\오목 (2)\Omok\lobby.c(227,1): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\string.h(133): message : 'strcpy' 선언을 참조하십시오.
-D:\KGITBank\Job\오목 (2)\Omok\lobby.c(246,1): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\string.h(133): message : 'strcpy' 선언을 참조하십시오.
-D:\KGITBank\Job\오목 (2)\Omok\lobby.c(254,1): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\string.h(133): message : 'strcpy' 선언을 참조하십시오.
-D:\KGITBank\Job\오목 (2)\Omok\lobby.c(268,1): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\string.h(90): message : 'strcat' 선언을 참조하십시오.
-D:\KGITBank\Job\오목 (2)\Omok\lobby.c(274,1): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\string.h(133): message : 'strcpy' 선언을 참조하십시오.
-D:\KGITBank\Job\오목 (2)\Omok\lobby.c(309,1): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\string.h(133): message : 'strcpy' 선언을 참조하십시오.
-D:\KGITBank\Job\오목 (2)\Omok\lobby.c(328,1): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\string.h(133): message : 'strcpy' 선언을 참조하십시오.
-D:\KGITBank\Job\오목 (2)\Omok\lobby.c(332,1): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\string.h(133): message : 'strcpy' 선언을 참조하십시오.
-D:\KGITBank\Job\오목 (2)\Omok\lobby.c(351,1): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\string.h(133): message : 'strcpy' 선언을 참조하십시오.
-D:\KGITBank\Job\오목 (2)\Omok\lobby.c(366,1): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\string.h(133): message : 'strcpy' 선언을 참조하십시오.
-D:\KGITBank\Job\오목 (2)\Omok\lobby.c(371,1): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\string.h(133): message : 'strcpy' 선언을 참조하십시오.
-D:\KGITBank\Job\오목 (2)\Omok\lobby.c(372,1): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\string.h(90): message : 'strcat' 선언을 참조하십시오.
-D:\KGITBank\Job\오목 (2)\Omok\lobby.c(303,16): warning C4101: 'opponentAddr' :참조되지 않은 지역 변수입니다.
-  Omok.vcxproj -> D:\KGITBank\Job\오목 (2)\Omok\Debug\Omok.exe
+﻿  main.c
+C:\Users\KGITBank\Desktop\오목_0419\Omok\main.c(57): warning C4047: '함수': 'int *'의 간접 참조 수준이 'int [15][15]'과(와) 다릅니다.
+C:\Users\KGITBank\Desktop\오목_0419\Omok\main.c(57): warning C4024: 'InitializeDolMatrix': 형식 및 실제 매개 변수 1의 형식이 서로 다릅니다.
+C:\Users\KGITBank\Desktop\오목_0419\Omok\main.c(58): warning C4047: '함수': 'int *'의 간접 참조 수준이 'int [15][15]'과(와) 다릅니다.
+C:\Users\KGITBank\Desktop\오목_0419\Omok\main.c(58): warning C4024: 'InitializePanMatrix': 형식 및 실제 매개 변수 1의 형식이 서로 다릅니다.
+C:\Users\KGITBank\Desktop\오목_0419\Omok\main.c(357): warning C4047: '함수': 'int *'의 간접 참조 수준이 'int [15][15]'과(와) 다릅니다.
+C:\Users\KGITBank\Desktop\오목_0419\Omok\main.c(357): warning C4024: 'MoveCursor': 형식 및 실제 매개 변수 1의 형식이 서로 다릅니다.
+C:\Users\KGITBank\Desktop\오목_0419\Omok\main.c(365): warning C4047: '함수': 'int *'의 간접 참조 수준이 'int [15][15]'과(와) 다릅니다.
+C:\Users\KGITBank\Desktop\오목_0419\Omok\main.c(365): warning C4024: 'JudgeGameEnded': 형식 및 실제 매개 변수 1의 형식이 서로 다릅니다.
+  Omok.vcxproj -> C:\Users\KGITBank\Desktop\오목_0419\Omok\Debug\Omok.exe
