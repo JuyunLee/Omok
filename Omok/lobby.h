@@ -62,7 +62,7 @@ void GetRoomNameFromUser(char* buf, int sizeofbuf);
 
 /*
 로비를 실행합니다
-@param		szServerIP		로비 서버의 IP
+@param		szServerIP		로비의 IP
 @param		szServerIpBuf	다른 사람 방에 입장하는 경우 상대방 ip를 저장할 버퍼
 @param		chatalso		채팅도 같이 켤 지(1 : 켬 / 0 : 안켬)
 @output		동작 결과 번호	0 : 게임 시작 / -1 : 돌아감

@@ -57,7 +57,7 @@ void CloseClientSocket(SOCKET* opponentSock, SOCKADDR_IN* servAddr);
 상대방의 키보드 입력을 수신합니다
 @param		opponentSock	소켓
 @param		buf				수신한 내용을 저장할 버퍼의 주소
-@return		nResult			버퍼에 저장하고 난 후의 인덱스(인...듯?)
+@return		수신된 문자열의 길이
 */
 int Recv(SOCKET opponentSock, char* buf);
 
@@ -83,3 +83,5 @@ void err_display(char* msg);
 
 */
 void err_quit(char* msg);
+
+

@@ -214,7 +214,7 @@ int Lobby(char* szServerIP, char* szServerIpBuf, int chatalso)
 	strcat(nickname, "] ");
 	system("cls");
 
-	strcpy(buf.msg, "r~");
+	strcpy(buf.msg, "i~");
 	buf.roomnum = 0;
 	sendto(srvSock, (char*)&buf, sizeof(buf), NULL, (SOCKADDR*)&srvAddr, sizeof(srvAddr));
 	memset(buf.msg, 0, sizeof(buf.msg));

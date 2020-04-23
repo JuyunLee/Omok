@@ -28,6 +28,7 @@ ROOM* GetRoom()
 N번째 방을 가져옵니다
 @param		head			ROOM Double Linked List의 head
 @param		iteration		재귀 횟수(--> iteration번째)
+@output		찾은 방의 방 번호
 */
 int GetNthRoom(ROOM** head, int iteration)
 {
@@ -89,9 +90,9 @@ void DeleteRoom(ROOM** head) {
 }
 
 /*
-방 주인의 ip주소를 가져와서 저장합니다
+방 주인의 ip주소를 문자열로 버퍼에 저장합니다
 @param		head		ROOM Double Linked List의 head의 주소
-@param		buf			방 주인의 ip 주소를 담을 배열(문자열 저장)
+@param		buf			방 주인의 ip 주소를 담을 버퍼
 @param		roomnum		가져올 방의 번호
 */
 void GetOwnerAddr(ROOM** head, char* buf, int roomnum) {

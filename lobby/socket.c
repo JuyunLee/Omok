@@ -1,9 +1,9 @@
 #include "socket.h"
 /*
-로비 서버를 엽니다
-@param	srvAddr		서버 주소 정보를 담을 변수의 주소
-@param	port		서버의 포트
-@output		서버를 열고 난 후의 소켓
+로비를 오픈합니다
+@param		srvAddr		로비의 주소 정보를 담을 변수의 주소
+@param		port		로비의 포트
+@output		로비를 열고 난 후의 소켓
 */
 SOCKET OpenLobby(SOCKADDR_IN* srvAddr, int port)
 {
@@ -17,3 +17,4 @@ SOCKET OpenLobby(SOCKADDR_IN* srvAddr, int port)
 	
 	return srvSock;
 }
+
